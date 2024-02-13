@@ -6,6 +6,11 @@ const getAllEmails=async(req ,res)=>{
   return res.status(201).json(emails)
 };
 const createEmails= async (req ,res)=>{
+
+
+console.log(req)
+
+  
   const createdEmail =await  emailModel.createEmail(req.body)
   return  res.status(201).json(createdEmail); // En
 }

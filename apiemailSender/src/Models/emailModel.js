@@ -1,9 +1,11 @@
 const connection = require("./connection")
 
+
 const getAllEmails =async()=>{
 const emails = await connection.execute('SELECT * FROM emails')
 return emails
 }
+
 
 const createEmail= async (task)=>{
     const {email}=task
